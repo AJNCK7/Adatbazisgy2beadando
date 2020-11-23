@@ -57,6 +57,7 @@
             this.btn_addnewowner.TabIndex = 36;
             this.btn_addnewowner.Text = "Add";
             this.btn_addnewowner.UseVisualStyleBackColor = true;
+            this.btn_addnewowner.Click += new System.EventHandler(this.btn_addnewowner_Click);
             // 
             // tb_EM
             // 

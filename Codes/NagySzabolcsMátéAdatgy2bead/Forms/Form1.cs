@@ -14,11 +14,14 @@ namespace NagySzabolcsMátéAdatgy2bead
     {
         private List<Animals> animals;
         private List<Dogs> dogs;
+        private List<Owners> owners;
         public Form1()
         {
             InitializeComponent();
             Initializecb_OwnORAni();
             Initializedgv_table();
+
+
         }
 
         private void Initializecb_OwnORAni()
@@ -30,7 +33,7 @@ namespace NagySzabolcsMátéAdatgy2bead
 
         private void btn_NewOwner_Click(object sender, EventArgs e)
         {
-            NewOwner newOwner = new NewOwner();
+            NewOwner newOwner = new NewOwner(this);
             newOwner.ShowDialog();
         }
 
@@ -45,7 +48,7 @@ namespace NagySzabolcsMátéAdatgy2bead
             if (cb_OwnORAni.SelectedIndex == 0)
             {
                 Initializedgv_table();
-                //UpdateDgv_table();
+                UpdateDgv_table();
             }
         }
 
@@ -98,10 +101,62 @@ namespace NagySzabolcsMátéAdatgy2bead
 
         }
 
-        public void UpdateDgv_Maintable()
+        public void UpdateDgv_table()
         {
             dgv_table.Rows.Clear();
+            if (cb_OwnORAni.SelectedIndex == 0)
+            {
+                OwnerTableHandler ownerTableHandler = new OwnerTableHandler();
+                owners = ownerTableHandler.Select();
+                foreach (Owners o in owners)
+                {
+                    dgv_table.Rows.Add(new object[]
+                    {
+                        o.OwnerId,
+                        o.FamilyName,
+                        o.Surname,
+                        o.BirthDate.ToString("yyyy.MM.dd")
+                    });
+                }
+            }
+            else
+            {
+                AnimalTableHandler animalTableHandler = new AnimalTableHandler();
+                animals = animalTableHandler.Select();
+                foreach (Animals animal in animals)
+                {
+                    dgv_table.Rows.Add(new object[]
+                    {
+                        animal.Id,
+                        animal.AnimalName,
+                        animal.BirthDate.ToString("yyyy.MM.dd"),
+                        animal.Neme,
+                        animal.Neutered == 0 ?  "nem" : "igen"
+                    });
+                }
+            }
+        }
 
+        public void DeleteDatas(int number)
+        {
+            if (cb_OwnORAni.SelectedIndex == 0)
+            {
+                OwnerTableHandler ownerTableHandler = new OwnerTableHandler();
+                int deletedrecordnumber = ownerTableHandler.Delete(number);
+                MessageBox.Show(deletedrecordnumber + "rekord sikeresen törölve!");
+                owners = ownerTableHandler.Select();
+                Initializedgv_table();
+                UpdateDgv_table();
+            }
+            else
+            {
+                AnimalTableHandler animalTableHandler = new AnimalTableHandler();
+                int deletedrecordnumber = animalTableHandler.Delete(number);
+                MessageBox.Show(deletedrecordnumber + "rekord sikeresen törölve!");
+                animals = animalTableHandler.Select();
+                Initializedgv_table();
+                UpdateDgv_table();
+            }
         }
     }
 }

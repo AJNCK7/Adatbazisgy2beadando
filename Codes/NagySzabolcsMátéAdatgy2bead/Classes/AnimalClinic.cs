@@ -10,8 +10,22 @@ namespace NagySzabolcsMátéAdatgy2bead
     {
         #region Mezők és propertyk
 
-        private string name;
-        public string Name
+        private int animalclinicid;
+        public int Animalclinicid
+        {
+            set
+            {
+                animalclinicid = value;
+            }
+            get
+            {
+                return animalclinicid;
+            }
+        }
+
+
+        private string animalclinicname;
+        public string Animalclinicname
         {
             set
             {
@@ -23,11 +37,11 @@ namespace NagySzabolcsMátéAdatgy2bead
                 {
                     throw new Exception("A név nem lehet 0 karakter hosszúságú");
                 }
-                name = value;
+                animalclinicname = value;
             }
             get
             {
-                return name;
+                return animalclinicname;
             }
         }
         #endregion

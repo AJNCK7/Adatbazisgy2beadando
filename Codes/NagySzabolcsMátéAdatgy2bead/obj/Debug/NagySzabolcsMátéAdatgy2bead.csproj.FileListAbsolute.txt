@@ -11,3 +11,5 @@ C:\Users\Szabolcs\source\repos\NagySzabolcsMátéAdatgy2bead\NagySzabolcsMátéA
 C:\Users\Szabolcs\source\repos\NagySzabolcsMátéAdatgy2bead\NagySzabolcsMátéAdatgy2bead\obj\Debug\NagySzabolcsMátéAdatgy2bead.csproj.CoreCompileInputs.cache
 C:\Users\Szabolcs\source\repos\NagySzabolcsMátéAdatgy2bead\NagySzabolcsMátéAdatgy2bead\obj\Debug\NagySzabolcsMátéAdatgy2bead.exe
 C:\Users\Szabolcs\source\repos\NagySzabolcsMátéAdatgy2bead\NagySzabolcsMátéAdatgy2bead\obj\Debug\NagySzabolcsMátéAdatgy2bead.pdb
+C:\Users\Szabolcs\source\repos\NagySzabolcsMátéAdatgy2bead\NagySzabolcsMátéAdatgy2bead\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Szabolcs\source\repos\NagySzabolcsMátéAdatgy2bead\NagySzabolcsMátéAdatgy2bead\obj\Debug\NagySzabolcsMátéAdatgy2bead.csproj.CopyComplete

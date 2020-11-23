@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NagySzabolcsMátéAdatgy2bead
 {
-    class Animals
+    public class Animals
     {
         #region propertyik
 
@@ -23,16 +23,12 @@ namespace NagySzabolcsMátéAdatgy2bead
             }
         }
 
-
-        private static int ID = 1;
-
         private int id;
         public int Id
         {
-             set
+            set
             {
-                id = ID;
-                ID++;
+                id = value;
             }
             get
             {
@@ -80,8 +76,8 @@ namespace NagySzabolcsMátéAdatgy2bead
             }
         }
 
-        private AnimalGender neme;
-        public AnimalGender Neme
+        private string neme;
+        public string Neme
         {
             set
             {

@@ -33,5 +33,98 @@ namespace NagySzabolcsMátéAdatgy2bead
             reader.Close();
             return owners;
         }
+
+        public int Delete(int number)
+        {
+            OracleCommand command = new OracleCommand();
+            command.Connection = connectionopen();
+            command.CommandType = System.Data.CommandType.Text;
+
+            command.CommandText = "DELETE FROM owners WHERE id = :id";
+
+            OracleParameter oId = new OracleParameter();
+            oId.ParameterName = ":id"; 
+            oId.OracleDbType = OracleDbType.Long; 
+            oId.Direction = System.Data.ParameterDirection.Input;
+            oId.Value = number;
+            command.Parameters.Add(oId);
+
+            return command.ExecuteNonQuery();
+        }
+
+        public int Insert(Owners newowner)
+        {
+            OracleCommand command = new OracleCommand();
+            command.Connection = connectionopen();
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = "INSERT INTO owners(id, familyName, surName, birthDate, zipCode, city, address, phonenumber, email)" +
+                " VALUES(:id, :familyName, :surName, :birthDate, :zipCode, :city, :address, :phonenumber, :email)";
+
+            OracleParameter commandId = new OracleParameter();
+            commandId.ParameterName = ":id";
+            commandId.OracleDbType = OracleDbType.Int64;
+            commandId.Direction = System.Data.ParameterDirection.Input;
+            commandId.Value = newowner.OwnerId;
+
+            OracleParameter commandFName = new OracleParameter();
+            commandFName .ParameterName = ":familyName";
+            commandFName .OracleDbType = OracleDbType.Varchar2;
+            commandFName .Direction = System.Data.ParameterDirection.Input;
+            commandFName.Value = newowner.FamilyName;
+
+            OracleParameter commandSName = new OracleParameter();
+            commandSName .ParameterName = ":surName";
+            commandSName .OracleDbType = OracleDbType.Varchar2;
+            commandSName .Direction = System.Data.ParameterDirection.Input;
+            commandSName.Value = newowner.Surname;
+
+            OracleParameter cBirthDate = new OracleParameter();
+            cBirthDate.ParameterName = ":birthDate";
+            cBirthDate.OracleDbType = OracleDbType.Date;
+            cBirthDate.Direction = System.Data.ParameterDirection.Input;
+            cBirthDate.Value = newowner.BirthDate;
+
+            OracleParameter cZipCode = new OracleParameter();
+            cZipCode.ParameterName = ":zipCode";
+            cZipCode.OracleDbType = OracleDbType.Varchar2;
+            cZipCode.Direction = System.Data.ParameterDirection.Input;
+            cZipCode.Value = newowner.ZipCode;
+
+            OracleParameter cCity = new OracleParameter();
+            cCity.ParameterName = ":city";
+            cCity.OracleDbType = OracleDbType.Varchar2;
+            cCity.Direction = System.Data.ParameterDirection.Input;
+            cCity.Value = newowner.City;
+
+            OracleParameter cAddress = new OracleParameter();
+            cAddress.ParameterName = ":address";
+            cAddress.OracleDbType = OracleDbType.Varchar2;
+            cAddress.Direction = System.Data.ParameterDirection.Input;
+            cAddress.Value = newowner.Address;
+
+            OracleParameter cphonenumber = new OracleParameter();
+            cphonenumber.ParameterName = ":phonenumber";
+            cphonenumber.OracleDbType = OracleDbType.Varchar2;
+            cphonenumber.Direction = System.Data.ParameterDirection.Input;
+            cphonenumber.Value = newowner.PhoneNumber;
+
+            OracleParameter cemail = new OracleParameter();
+            cemail.ParameterName = ":email";
+            cemail.OracleDbType = OracleDbType.Varchar2;
+            cemail.Direction = System.Data.ParameterDirection.Input;
+            cemail.Value = newowner.Email;
+
+            command.Parameters.Add(commandId);
+            command.Parameters.Add(commandFName);
+            command.Parameters.Add(commandSName);
+            command.Parameters.Add(cBirthDate);
+            command.Parameters.Add(cZipCode);
+            command.Parameters.Add(cCity);
+            command.Parameters.Add(cAddress);
+            command.Parameters.Add(cphonenumber);
+            command.Parameters.Add(cemail);
+
+            return command.ExecuteNonQuery();
+        }
     }
 }
