@@ -7,6 +7,6 @@ create table animalclinic(
     animalclinicid int not null,
     animalclinicname char(200) not null,
     
-    constraint pk_animalclinic primary key(animalclinicid)
-    
+    constraint pk_animalclinic primary key(animalclinicid),
+    constraint uq_ownerid unique(ownerid)
 );

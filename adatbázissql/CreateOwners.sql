@@ -13,5 +13,7 @@ create table owners
     email char(200) not null,
     
     constraint pk_owners primary key(id),
-    constraint fk_animalclinic foreign key(id) references animalclinic(owner_id)
+    constraint fk_animalclinic foreign key(id) references animalclinic(ownerid)
 );
+
+ 
