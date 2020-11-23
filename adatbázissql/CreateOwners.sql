@@ -6,7 +6,7 @@ create table owners
     familyName char(60) not null,
     surName char(60) not null,
     birthDate date not null,
-    zipCode int not null,
+    zipCode string(4) not null,
     city char(200) not null,
     address char(200) not null,
     phoneNumber char(12) not null,
