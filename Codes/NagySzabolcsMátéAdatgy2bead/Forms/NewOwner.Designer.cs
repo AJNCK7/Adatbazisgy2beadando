@@ -204,7 +204,7 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "FamilyName:";
             // 
-            // NweOwner
+            // NewOwner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -227,8 +227,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "NweOwner";
-            this.Text = "NweOwner";
+            this.Name = "NewOwner";
+            this.Text = "NewOwner";
             this.ResumeLayout(false);
             this.PerformLayout();
 

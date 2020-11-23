@@ -8,22 +8,6 @@ namespace NagySzabolcsMátéAdatgy2bead
 {
     class Animals
     {
-        #region konstruktorok
-        public Animals(int Id)
-        {
-            this.Id = Id;
-        }
-        public Animals(int AnimalownerId, int Id, string AnimalName, DateTime BirthDate, AnimalGender Neme, byte Neutered)
-            :this(Id)
-        {
-            this.AnimalownerId = AnimalownerId;
-            this.AnimalName = AnimalName;
-            this.BirthDate = BirthDate;
-            this.Neme = Neme;
-            this.Neutered = Neutered;
-        }
-        #endregion
-
         #region propertyik
 
         private int animalownerId;

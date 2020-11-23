@@ -1,0 +1,13 @@
+C:\Users\Szabolcs\source\repos\NagySzabolcsMátéAdatgy2bead\NagySzabolcsMátéAdatgy2bead\bin\Debug\NagySzabolcsMátéAdatgy2bead.exe.config
+C:\Users\Szabolcs\source\repos\NagySzabolcsMátéAdatgy2bead\NagySzabolcsMátéAdatgy2bead\bin\Debug\NagySzabolcsMátéAdatgy2bead.exe
+C:\Users\Szabolcs\source\repos\NagySzabolcsMátéAdatgy2bead\NagySzabolcsMátéAdatgy2bead\bin\Debug\NagySzabolcsMátéAdatgy2bead.pdb
+C:\Users\Szabolcs\source\repos\NagySzabolcsMátéAdatgy2bead\NagySzabolcsMátéAdatgy2bead\obj\Debug\NagySzabolcsMátéAdatgy2bead.csprojAssemblyReference.cache
+C:\Users\Szabolcs\source\repos\NagySzabolcsMátéAdatgy2bead\NagySzabolcsMátéAdatgy2bead\obj\Debug\NagySzabolcsMátéAdatgy2bead.Form1.resources
+C:\Users\Szabolcs\source\repos\NagySzabolcsMátéAdatgy2bead\NagySzabolcsMátéAdatgy2bead\obj\Debug\NagySzabolcsMátéAdatgy2bead.NewAnimal.resources
+C:\Users\Szabolcs\source\repos\NagySzabolcsMátéAdatgy2bead\NagySzabolcsMátéAdatgy2bead\obj\Debug\NagySzabolcsMátéAdatgy2bead.NewOwner.resources
+C:\Users\Szabolcs\source\repos\NagySzabolcsMátéAdatgy2bead\NagySzabolcsMátéAdatgy2bead\obj\Debug\NagySzabolcsMátéAdatgy2bead.OwnerDatas.resources
+C:\Users\Szabolcs\source\repos\NagySzabolcsMátéAdatgy2bead\NagySzabolcsMátéAdatgy2bead\obj\Debug\NagySzabolcsMátéAdatgy2bead.Properties.Resources.resources
+C:\Users\Szabolcs\source\repos\NagySzabolcsMátéAdatgy2bead\NagySzabolcsMátéAdatgy2bead\obj\Debug\NagySzabolcsMátéAdatgy2bead.csproj.GenerateResource.cache
+C:\Users\Szabolcs\source\repos\NagySzabolcsMátéAdatgy2bead\NagySzabolcsMátéAdatgy2bead\obj\Debug\NagySzabolcsMátéAdatgy2bead.csproj.CoreCompileInputs.cache
+C:\Users\Szabolcs\source\repos\NagySzabolcsMátéAdatgy2bead\NagySzabolcsMátéAdatgy2bead\obj\Debug\NagySzabolcsMátéAdatgy2bead.exe
+C:\Users\Szabolcs\source\repos\NagySzabolcsMátéAdatgy2bead\NagySzabolcsMátéAdatgy2bead\obj\Debug\NagySzabolcsMátéAdatgy2bead.pdb

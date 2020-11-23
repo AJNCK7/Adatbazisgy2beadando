@@ -6,15 +6,8 @@ using System.Threading.Tasks;
 
 namespace NagySzabolcsMátéAdatgy2bead
 {
-    class Dogs
+    class Dogs : Animals
     {
-        public Dogs(int AnimalownerId, int ID, string AnimalName, DateTime BirthDate, AnimalGender Neme, byte Neutered, string Specie, byte IsChipped, string ChipID)
-            :base(AnimalownerId, ID, AnimalName, BirthDate, Neme, Neutered)
-        {
-            this.Specie = Specie;
-            this.IsChipped = IsChipped;
-            this.ChipID = ChipID;
-        }
 
         private int dogid;
         public int Dogid

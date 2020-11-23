@@ -6,38 +6,15 @@ using System.Threading.Tasks;
 
 namespace NagySzabolcsMátéAdatgy2bead
 {
-    class Owners
+    public class Owners
     {
-        #region Konstruktor
-        public Owners(int ownerid)
-        {
-            this.OwnerId = ownerid;
-        }
-        public Owners(int ownerid, string FamilyName, string Surname, DateTime BirthDate,
-            string ZipCode, string City, string Address, string PhoneNumber, string Email)
-            : this(ownerid)
-
-        {
-            this.FamilyName = FamilyName;
-            this.Surname = Surname;
-            this.BirthDate = BirthDate;
-            this.ZipCode = ZipCode;
-            this.City = City;
-            this.Address = Address;
-            this.PhoneNumber = PhoneNumber;
-            this.Email = Email;
-        }
-        #endregion
-
-        private static int ID = 1;
 
         private int ownerid;
         public int OwnerId
         {
-            private set
+            set
             {
-                ownerid = ID;
-                ID++;
+                ownerid = value;
             }
             get
             {
