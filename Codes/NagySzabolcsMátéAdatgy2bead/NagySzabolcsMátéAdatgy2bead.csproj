@@ -56,6 +56,12 @@
     <Compile Include="Classes\Dogs.cs" />
     <Compile Include="Databaseclasses\DatabaseConnection.cs" />
     <Compile Include="Databaseclasses\OwnerTableHandler.cs" />
+    <Compile Include="Forms\ChangeOwnerDatas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangeOwnerDatas.Designer.cs">
+      <DependentUpon>ChangeOwnerDatas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     <Compile Include="Classes\Owners.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\ChangeOwnerDatas.resx">
+      <DependentUpon>ChangeOwnerDatas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -12,20 +12,23 @@ namespace NagySzabolcsMátéAdatgy2bead
 {
     public partial class NewOwner : Form
     {
-        private static int id = 1;
         private Form1 helper;
+        private List<Owners> owners;
         public NewOwner(Form1 form1)
         {
             InitializeComponent();
             helper = form1;
+            OwnerTableHandler ownerTableHandler = new OwnerTableHandler();
+            owners = ownerTableHandler.Select();
         }
 
         private void btn_addnewowner_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 Owners newo = new Owners();
-                newo.OwnerId = id;
+                newo.OwnerId = owners.Count + 1;
                 newo.FamilyName = tb_FN.Text;
                 newo.Surname = tb_SN.Text;
                 newo.BirthDate = dtp_BD.Value;
@@ -54,7 +57,6 @@ namespace NagySzabolcsMátéAdatgy2bead
             }
 
             helper.UpdateDgv_table();
-            id++;
             this.Close();
         }
     }

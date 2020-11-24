@@ -17,7 +17,7 @@ namespace NagySzabolcsMátéAdatgy2bead
             OracleCommand command = new OracleCommand();
             command.Connection = connectionopen();
             command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = "SELECT id, familyName, surName, birthDate FROM owners";
+            command.CommandText = "SELECT id, familyName, surName, birthDate, zipCode, city, address, phonenumber, email FROM owners";
 
             OracleDataReader reader = command.ExecuteReader();
             while (reader.Read())
@@ -27,12 +27,17 @@ namespace NagySzabolcsMátéAdatgy2bead
                 newowner.FamilyName = (string)reader["familyName"];
                 newowner.Surname = (string)reader["surName"];
                 newowner.BirthDate = (DateTime)reader["birthDate"];
-
+                newowner.ZipCode = (string)reader["zipCode"];
+                newowner.City = (string)reader["city"];
+                newowner.Address = (string)reader["address"];
+                newowner.PhoneNumber = (string)reader["phonenumber"];
+                newowner.Email = (string)reader["email"];
                 owners.Add(newowner);
             }
             reader.Close();
             return owners;
         }
+
 
         public int Delete(int number)
         {
@@ -45,6 +50,37 @@ namespace NagySzabolcsMátéAdatgy2bead
             OracleParameter oId = new OracleParameter();
             oId.ParameterName = ":id"; 
             oId.OracleDbType = OracleDbType.Long; 
+            oId.Direction = System.Data.ParameterDirection.Input;
+            oId.Value = number;
+            command.Parameters.Add(oId);
+
+            return command.ExecuteNonQuery();
+        }
+
+        public int Update(int number, string dataname, string data, OracleDbType oracleDbType)
+        {
+            OracleCommand command = new OracleCommand();
+            command.Connection = connectionopen();
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = "UPDATE owners SET :dataname = :data WHERE id = :id";
+
+            OracleParameter odataname = new OracleParameter();
+            odataname.ParameterName = ":dataname";
+            odataname.OracleDbType = OracleDbType.Char;
+            odataname.Direction = System.Data.ParameterDirection.Input;
+            odataname.Value = "surName";
+            command.Parameters.Add(odataname);
+
+            OracleParameter odata = new OracleParameter();
+            odata.ParameterName = ":data";
+            odata.OracleDbType = oracleDbType;
+            odata.Direction = System.Data.ParameterDirection.Input;
+            odata.Value = data;
+            command.Parameters.Add(odata);
+
+            OracleParameter oId = new OracleParameter();
+            oId.ParameterName = ":id";
+            oId.OracleDbType = OracleDbType.Int64;
             oId.Direction = System.Data.ParameterDirection.Input;
             oId.Value = number;
             command.Parameters.Add(oId);

@@ -53,7 +53,7 @@
             this.cb_OwnORAni.Name = "cb_OwnORAni";
             this.cb_OwnORAni.Size = new System.Drawing.Size(148, 21);
             this.cb_OwnORAni.TabIndex = 1;
-            this.cb_OwnORAni.Text = "Tulajdonos";
+            this.cb_OwnORAni.Text = "Choose";
             this.cb_OwnORAni.SelectedIndexChanged += new System.EventHandler(this.cb_OwnORAni_SelectedIndexChanged_1);
             // 
             // btn_NewOwner

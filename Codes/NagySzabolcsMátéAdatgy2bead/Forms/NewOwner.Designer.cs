@@ -36,7 +36,6 @@
             this.tb_CT = new System.Windows.Forms.TextBox();
             this.tb_ZC = new System.Windows.Forms.TextBox();
             this.tb_SN = new System.Windows.Forms.TextBox();
-            this.tb_FN = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -46,6 +45,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tb_FN = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_addnewowner
@@ -107,13 +108,6 @@
             this.tb_SN.Name = "tb_SN";
             this.tb_SN.Size = new System.Drawing.Size(200, 20);
             this.tb_SN.TabIndex = 29;
-            // 
-            // tb_FN
-            // 
-            this.tb_FN.Location = new System.Drawing.Point(183, 45);
-            this.tb_FN.Name = "tb_FN";
-            this.tb_FN.Size = new System.Drawing.Size(200, 20);
-            this.tb_FN.TabIndex = 28;
             // 
             // label10
             // 
@@ -205,11 +199,29 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "FamilyName:";
             // 
+            // tb_FN
+            // 
+            this.tb_FN.Location = new System.Drawing.Point(183, 45);
+            this.tb_FN.Name = "tb_FN";
+            this.tb_FN.Size = new System.Drawing.Size(200, 20);
+            this.tb_FN.TabIndex = 28;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label9.Location = new System.Drawing.Point(29, 45);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(107, 20);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "FamilyName:";
+            // 
             // NewOwner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 308);
+            this.ClientSize = new System.Drawing.Size(427, 310);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btn_addnewowner);
             this.Controls.Add(this.tb_EM);
             this.Controls.Add(this.tb_PN);
@@ -227,7 +239,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "NewOwner";
             this.Text = "NewOwner";
             this.ResumeLayout(false);
@@ -245,7 +256,6 @@
         private System.Windows.Forms.TextBox tb_CT;
         private System.Windows.Forms.TextBox tb_ZC;
         private System.Windows.Forms.TextBox tb_SN;
-        private System.Windows.Forms.TextBox tb_FN;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -255,5 +265,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tb_FN;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -162,81 +162,90 @@
             // lbl_ownerid
             // 
             this.lbl_ownerid.AutoSize = true;
-            this.lbl_ownerid.Location = new System.Drawing.Point(154, 82);
+            this.lbl_ownerid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_ownerid.Location = new System.Drawing.Point(154, 77);
             this.lbl_ownerid.Name = "lbl_ownerid";
-            this.lbl_ownerid.Size = new System.Drawing.Size(41, 13);
+            this.lbl_ownerid.Size = new System.Drawing.Size(60, 20);
             this.lbl_ownerid.TabIndex = 11;
             this.lbl_ownerid.Text = "label11";
             // 
             // lbl_familyname
             // 
             this.lbl_familyname.AutoSize = true;
-            this.lbl_familyname.Location = new System.Drawing.Point(154, 102);
+            this.lbl_familyname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_familyname.Location = new System.Drawing.Point(154, 97);
             this.lbl_familyname.Name = "lbl_familyname";
-            this.lbl_familyname.Size = new System.Drawing.Size(41, 13);
+            this.lbl_familyname.Size = new System.Drawing.Size(60, 20);
             this.lbl_familyname.TabIndex = 12;
             this.lbl_familyname.Text = "label11";
             // 
             // lbl_surname
             // 
             this.lbl_surname.AutoSize = true;
-            this.lbl_surname.Location = new System.Drawing.Point(154, 123);
+            this.lbl_surname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_surname.Location = new System.Drawing.Point(154, 118);
             this.lbl_surname.Name = "lbl_surname";
-            this.lbl_surname.Size = new System.Drawing.Size(41, 13);
+            this.lbl_surname.Size = new System.Drawing.Size(60, 20);
             this.lbl_surname.TabIndex = 13;
             this.lbl_surname.Text = "label11";
             // 
             // lbl_birthdate
             // 
             this.lbl_birthdate.AutoSize = true;
-            this.lbl_birthdate.Location = new System.Drawing.Point(154, 145);
+            this.lbl_birthdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_birthdate.Location = new System.Drawing.Point(154, 140);
             this.lbl_birthdate.Name = "lbl_birthdate";
-            this.lbl_birthdate.Size = new System.Drawing.Size(41, 13);
+            this.lbl_birthdate.Size = new System.Drawing.Size(60, 20);
             this.lbl_birthdate.TabIndex = 14;
             this.lbl_birthdate.Text = "label12";
             // 
             // lbl_zipcode
             // 
             this.lbl_zipcode.AutoSize = true;
-            this.lbl_zipcode.Location = new System.Drawing.Point(154, 165);
+            this.lbl_zipcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_zipcode.Location = new System.Drawing.Point(154, 160);
             this.lbl_zipcode.Name = "lbl_zipcode";
-            this.lbl_zipcode.Size = new System.Drawing.Size(41, 13);
+            this.lbl_zipcode.Size = new System.Drawing.Size(60, 20);
             this.lbl_zipcode.TabIndex = 15;
             this.lbl_zipcode.Text = "label11";
             // 
             // lbl_city
             // 
             this.lbl_city.AutoSize = true;
-            this.lbl_city.Location = new System.Drawing.Point(154, 185);
+            this.lbl_city.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_city.Location = new System.Drawing.Point(154, 180);
             this.lbl_city.Name = "lbl_city";
-            this.lbl_city.Size = new System.Drawing.Size(41, 13);
+            this.lbl_city.Size = new System.Drawing.Size(60, 20);
             this.lbl_city.TabIndex = 16;
             this.lbl_city.Text = "label11";
             // 
             // lbl_address
             // 
             this.lbl_address.AutoSize = true;
-            this.lbl_address.Location = new System.Drawing.Point(154, 205);
+            this.lbl_address.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_address.Location = new System.Drawing.Point(154, 200);
             this.lbl_address.Name = "lbl_address";
-            this.lbl_address.Size = new System.Drawing.Size(41, 13);
+            this.lbl_address.Size = new System.Drawing.Size(60, 20);
             this.lbl_address.TabIndex = 17;
             this.lbl_address.Text = "label11";
             // 
             // lbl_phonenumber
             // 
             this.lbl_phonenumber.AutoSize = true;
-            this.lbl_phonenumber.Location = new System.Drawing.Point(154, 223);
+            this.lbl_phonenumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_phonenumber.Location = new System.Drawing.Point(154, 218);
             this.lbl_phonenumber.Name = "lbl_phonenumber";
-            this.lbl_phonenumber.Size = new System.Drawing.Size(41, 13);
+            this.lbl_phonenumber.Size = new System.Drawing.Size(60, 20);
             this.lbl_phonenumber.TabIndex = 18;
             this.lbl_phonenumber.Text = "label11";
             // 
             // lbl_email
             // 
             this.lbl_email.AutoSize = true;
-            this.lbl_email.Location = new System.Drawing.Point(154, 243);
+            this.lbl_email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lbl_email.Location = new System.Drawing.Point(154, 238);
             this.lbl_email.Name = "lbl_email";
-            this.lbl_email.Size = new System.Drawing.Size(41, 13);
+            this.lbl_email.Size = new System.Drawing.Size(60, 20);
             this.lbl_email.TabIndex = 19;
             this.lbl_email.Text = "label11";
             // 

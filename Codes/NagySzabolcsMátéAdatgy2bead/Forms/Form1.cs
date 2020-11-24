@@ -20,8 +20,7 @@ namespace NagySzabolcsMátéAdatgy2bead
             InitializeComponent();
             Initializecb_OwnORAni();
             Initializedgv_table();
-
-
+            UpdateDgv_table();
         }
 
         private void Initializecb_OwnORAni()
@@ -50,6 +49,11 @@ namespace NagySzabolcsMátéAdatgy2bead
                 Initializedgv_table();
                 UpdateDgv_table();
             }
+            else
+            {
+                Initializedgv_table();
+                UpdateDgv_table();
+            }
         }
 
         private void Initializedgv_table()
@@ -70,7 +74,7 @@ namespace NagySzabolcsMátéAdatgy2bead
                 dgv_table.Columns.Add("Animalname", "Animal name");
                 dgv_table.Columns.Add("BirthDate", "Birth date");
                 dgv_table.Columns.Add("Neme", "Gender");
-                dgv_table.Columns.Add("Ivartalanitott", "Ivartalanított");
+                dgv_table.Columns.Add("Ivartalanitott", "Neutered");
             }
 
             DataGridViewButtonColumn dgvbcRead = new DataGridViewButtonColumn();
@@ -98,7 +102,30 @@ namespace NagySzabolcsMátéAdatgy2bead
 
         private void dgv_table_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridView dgv = sender as DataGridView;
+            switch (dgv.Columns[e.ColumnIndex].Name)
+            {
+                case "Datas":
+                    if (cb_OwnORAni.SelectedIndex == 0)
+                    {
+                       OwnerDatas ownerDatas = new OwnerDatas(int.Parse(dgv.Rows[e.RowIndex].Cells["Id"].Value.ToString()));
+                        ownerDatas.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nem lett kidolgozva");
+                    }
 
+                    break;
+                case "Change":
+                    ChangeDatas(int.Parse(dgv.Rows[e.RowIndex].Cells["Id"].Value.ToString()));
+                    break;
+                case "Delete":
+                    DeleteDatas(int.Parse(dgv.Rows[e.RowIndex].Cells["Id"].Value.ToString()));
+                    break;
+                default:
+                    break;
+            }
         }
 
         public void UpdateDgv_table()
@@ -145,6 +172,7 @@ namespace NagySzabolcsMátéAdatgy2bead
                 int deletedrecordnumber = ownerTableHandler.Delete(number);
                 MessageBox.Show(deletedrecordnumber + "rekord sikeresen törölve!");
                 owners = ownerTableHandler.Select();
+                ownerTableHandler.Delete(number);
                 Initializedgv_table();
                 UpdateDgv_table();
             }
@@ -157,6 +185,20 @@ namespace NagySzabolcsMátéAdatgy2bead
                 Initializedgv_table();
                 UpdateDgv_table();
             }
+        }
+
+        public void ChangeDatas(int number)
+        {
+            if (cb_OwnORAni.SelectedIndex == 0)
+            {
+                ChangeOwnerDatas set = new ChangeOwnerDatas(number, this);
+                set.ShowDialog();
+            }
+            //else
+            //{
+            //    ChangeAnimalDatas set = new ChangeAnimalDatas(number, this);
+            //    set.ShowDialog();
+            //}
         }
     }
 }
