@@ -1,0 +1,41 @@
+create or replace procedure spInsert_owners(
+    p_id         in owners.id%type,
+    p_familyName         in owners.familyname%type,
+    p_surName         in owners.surname%type,
+    p_birthDate         in owners.birthdate%type,
+    p_zipCode         in owners.zipcode%type,
+    p_city         in owners.city%type,
+    p_address         in owners.address%type,
+    p_phoneNumber         in owners.phonenumber%type,
+    p_email         in owners.email%type,
+    
+    p_out_rowcnt out int
+)
+
+authid definer
+as
+    v_check_zipCode int;
+    v_check_phoneNumber int;
+    v_check_email int;
+    v_id int;
+begin
+    p_out_rowcnt := 0;
+    select max(id) into v_id from owners;
+    if v_id is null then
+        v_id := 0;
+    end if;
+    v_id := v_id + 1;
+    
+    if v_check_zipCode = 1 then
+        if v_check_phoneNumber = 1 then
+                insert into owners
+                        (id, familyName, surName, birthDate, zipCode, city, address, phonenumber, email)
+                        values
+                        (p_id, p_familyName, p_surName, p_birthDate, p_zipCode, p_city, p_address, p_phoneNumber, p_email);
+                        
+                        p_out_rowcnt := SQL%rowcount;
+                        commit;
+        end if;
+    end if;
+    
+end spInsert_owners;

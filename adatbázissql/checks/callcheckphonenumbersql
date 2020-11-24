@@ -1,0 +1,13 @@
+set serveroutput on;
+declare
+    v_call_phonenumber int;
+    v_phonenumber owners.phonenumber%type := '+36307211321';
+begin
+    v_call_phonenumber := sf_check_phonenumber(v_phonenumber);
+    if v_call_phonenumber = 1 then
+        DBMS_OUTPUT.PUT_LINE('Az alábbi telefonszám helyes: '||v_phonenumber);
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Az alábbi telefonszám helytelen: '||v_phonenumber);
+    END IF;
+    
+end;
