@@ -12,8 +12,6 @@ namespace NagySzabolcsMátéAdatgy2bead
 {
     public partial class Form1 : Form
     {
-        private List<Animals> animals;
-        private List<Dogs> dogs;
         private List<Owners> owners;
         public Form1()
         {
@@ -34,12 +32,6 @@ namespace NagySzabolcsMátéAdatgy2bead
         {
             NewOwner newOwner = new NewOwner(this);
             newOwner.ShowDialog();
-        }
-
-        private void btn_newanimal_Click(object sender, EventArgs e)
-        {
-            NewAnimal newAnimal = new NewAnimal();
-            newAnimal.ShowDialog();
         }
 
         private void cb_OwnORAni_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -134,8 +126,7 @@ namespace NagySzabolcsMátéAdatgy2bead
             if (cb_OwnORAni.SelectedIndex == 0)
             {
                 OwnerTableHandler ownerTableHandler = new OwnerTableHandler();
-                owners = ownerTableHandler.Select();
-                foreach (Owners o in owners)
+                foreach (Owners o in ownerTableHandler.Select())
                 {
                     dgv_table.Rows.Add(new object[]
                     {
@@ -143,22 +134,6 @@ namespace NagySzabolcsMátéAdatgy2bead
                         o.FamilyName,
                         o.Surname,
                         o.BirthDate.ToString("yyyy.MM.dd")
-                    });
-                }
-            }
-            else
-            {
-                AnimalTableHandler animalTableHandler = new AnimalTableHandler();
-                animals = animalTableHandler.Select();
-                foreach (Animals animal in animals)
-                {
-                    dgv_table.Rows.Add(new object[]
-                    {
-                        animal.Id,
-                        animal.AnimalName,
-                        animal.BirthDate.ToString("yyyy.MM.dd"),
-                        animal.Neme,
-                        animal.Neutered == 0 ?  "nem" : "igen"
                     });
                 }
             }
@@ -176,15 +151,6 @@ namespace NagySzabolcsMátéAdatgy2bead
                 Initializedgv_table();
                 UpdateDgv_table();
             }
-            else
-            {
-                AnimalTableHandler animalTableHandler = new AnimalTableHandler();
-                int deletedrecordnumber = animalTableHandler.Delete(number);
-                MessageBox.Show(deletedrecordnumber + "rekord sikeresen törölve!");
-                animals = animalTableHandler.Select();
-                Initializedgv_table();
-                UpdateDgv_table();
-            }
         }
 
         public void ChangeDatas(int number)
@@ -194,11 +160,6 @@ namespace NagySzabolcsMátéAdatgy2bead
                 ChangeOwnerDatas set = new ChangeOwnerDatas(number, this);
                 set.ShowDialog();
             }
-            //else
-            //{
-            //    ChangeAnimalDatas set = new ChangeAnimalDatas(number, this);
-            //    set.ShowDialog();
-            //}
         }
     }
 }

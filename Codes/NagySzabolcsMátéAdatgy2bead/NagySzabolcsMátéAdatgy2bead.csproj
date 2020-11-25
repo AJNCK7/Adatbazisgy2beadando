@@ -50,12 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Databaseclasses\AnimalTableHandler.cs" />
-    <Compile Include="Classes\AnimalClinic.cs" />
-    <Compile Include="Classes\Animals.cs" />
-    <Compile Include="Classes\Dogs.cs" />
-    <Compile Include="Databaseclasses\DatabaseConnection.cs" />
-    <Compile Include="Databaseclasses\OwnerTableHandler.cs" />
+    <Compile Include="TableHandlers\DatabaseConnection.cs" />
+    <Compile Include="TableHandlers\OwnerTableHandler.cs" />
     <Compile Include="Forms\ChangeOwnerDatas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,12 +63,6 @@
     </Compile>
     <Compile Include="Forms\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\NewAnimal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\NewAnimal.Designer.cs">
-      <DependentUpon>NewAnimal.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\NewOwner.cs">
       <SubType>Form</SubType>
@@ -94,9 +84,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\NewAnimal.resx">
-      <DependentUpon>NewAnimal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewOwner.resx">
       <DependentUpon>NewOwner.cs</DependentUpon>

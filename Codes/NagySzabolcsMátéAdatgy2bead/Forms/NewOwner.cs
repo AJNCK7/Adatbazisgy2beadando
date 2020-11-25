@@ -24,7 +24,6 @@ namespace NagySzabolcsMátéAdatgy2bead
 
         private void btn_addnewowner_Click(object sender, EventArgs e)
         {
-            
             try
             {
                 Owners newo = new Owners();
@@ -49,7 +48,7 @@ namespace NagySzabolcsMátéAdatgy2bead
                 OwnerTableHandler handler = new OwnerTableHandler();
                 int insertedrownum = handler.Insert(newo);
                 MessageBox.Show(insertedrownum + "sor sikeresen rögzítve");
-
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -57,7 +56,7 @@ namespace NagySzabolcsMátéAdatgy2bead
             }
 
             helper.UpdateDgv_table();
-            this.Close();
+            
         }
     }
 }

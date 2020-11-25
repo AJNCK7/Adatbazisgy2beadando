@@ -38,7 +38,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.dgv_owneranimals = new System.Windows.Forms.DataGridView();
             this.lbl_ownerid = new System.Windows.Forms.Label();
             this.lbl_familyname = new System.Windows.Forms.Label();
             this.lbl_surname = new System.Windows.Forms.Label();
@@ -48,7 +47,6 @@
             this.lbl_address = new System.Windows.Forms.Label();
             this.lbl_phonenumber = new System.Windows.Forms.Label();
             this.lbl_email = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_owneranimals)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -151,14 +149,6 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "Email";
             // 
-            // dgv_owneranimals
-            // 
-            this.dgv_owneranimals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_owneranimals.Location = new System.Drawing.Point(40, 272);
-            this.dgv_owneranimals.Name = "dgv_owneranimals";
-            this.dgv_owneranimals.Size = new System.Drawing.Size(748, 166);
-            this.dgv_owneranimals.TabIndex = 10;
-            // 
             // lbl_ownerid
             // 
             this.lbl_ownerid.AutoSize = true;
@@ -254,7 +244,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(392, 282);
             this.Controls.Add(this.lbl_email);
             this.Controls.Add(this.lbl_phonenumber);
             this.Controls.Add(this.lbl_address);
@@ -264,7 +254,6 @@
             this.Controls.Add(this.lbl_surname);
             this.Controls.Add(this.lbl_familyname);
             this.Controls.Add(this.lbl_ownerid);
-            this.Controls.Add(this.dgv_owneranimals);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -277,7 +266,6 @@
             this.Controls.Add(this.label1);
             this.Name = "OwnerDatas";
             this.Text = "OwnerDatas";
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_owneranimals)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,7 +283,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridView dgv_owneranimals;
         private System.Windows.Forms.Label lbl_ownerid;
         private System.Windows.Forms.Label lbl_familyname;
         private System.Windows.Forms.Label lbl_surname;
