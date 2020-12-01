@@ -100,7 +100,7 @@ namespace NagySzabolcsMátéAdatgy2bead
                 case "Datas":
                     if (cb_OwnORAni.SelectedIndex == 0)
                     {
-                       OwnerDatas ownerDatas = new OwnerDatas(int.Parse(dgv.Rows[e.RowIndex].Cells["Id"].Value.ToString()));
+                       OwnerDatas ownerDatas = new OwnerDatas(dgv.Rows[e.RowIndex].Cells["Id"].Value.ToString());
                         ownerDatas.ShowDialog();
                     }
                     else
@@ -110,10 +110,10 @@ namespace NagySzabolcsMátéAdatgy2bead
 
                     break;
                 case "Change":
-                    ChangeDatas(int.Parse(dgv.Rows[e.RowIndex].Cells["Id"].Value.ToString()));
+                    ChangeDatas(dgv.Rows[e.RowIndex].Cells["Id"].Value.ToString());
                     break;
                 case "Delete":
-                    DeleteDatas(int.Parse(dgv.Rows[e.RowIndex].Cells["Id"].Value.ToString()));
+                    DeleteDatas(dgv.Rows[e.RowIndex].Cells["Id"].Value.ToString());
                     break;
                 default:
                     break;
@@ -139,12 +139,12 @@ namespace NagySzabolcsMátéAdatgy2bead
             }
         }
 
-        public void DeleteDatas(int number)
+        public void DeleteDatas(string number)
         {
             if (cb_OwnORAni.SelectedIndex == 0)
             {
                 OwnerTableHandler ownerTableHandler = new OwnerTableHandler();
-                int deletedrecordnumber = ownerTableHandler.Delete(number);
+                string deletedrecordnumber = ownerTableHandler.Delete(number).ToString(); ////////////////6--------------------------------
                 MessageBox.Show(deletedrecordnumber + "rekord sikeresen törölve!");
                 owners = ownerTableHandler.Select();
                 ownerTableHandler.Delete(number);
@@ -153,11 +153,11 @@ namespace NagySzabolcsMátéAdatgy2bead
             }
         }
 
-        public void ChangeDatas(int number)
+        public void ChangeDatas(string id)
         {
             if (cb_OwnORAni.SelectedIndex == 0)
             {
-                ChangeOwnerDatas set = new ChangeOwnerDatas(number, this);
+                ChangeOwnerDatas set = new ChangeOwnerDatas(id, this);
                 set.ShowDialog();
             }
         }

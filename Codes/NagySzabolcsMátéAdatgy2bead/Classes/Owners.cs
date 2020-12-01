@@ -9,8 +9,8 @@ namespace NagySzabolcsMátéAdatgy2bead
     public class Owners
     {
 
-        private int ownerid;
-        public int OwnerId
+        private string ownerid;
+        public string OwnerId
         {
             set
             {

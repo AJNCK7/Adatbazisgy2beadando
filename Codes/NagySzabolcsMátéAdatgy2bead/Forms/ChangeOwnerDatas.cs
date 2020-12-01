@@ -14,8 +14,8 @@ namespace NagySzabolcsMátéAdatgy2bead
     public partial class ChangeOwnerDatas : Form
     {
         private Form1 helper;
-        private int ID;
-        public ChangeOwnerDatas(int id, Form1 form1)
+        private string ID;
+        public ChangeOwnerDatas(string id, Form1 form1)
         {
             InitializeComponent();
             Initialize_CbDatas();

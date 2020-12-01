@@ -12,14 +12,14 @@ namespace NagySzabolcsMátéAdatgy2bead
 {
     public partial class OwnerDatas : Form
     {
-        public OwnerDatas(int ID)
+        public OwnerDatas(string ID)
         {
             InitializeComponent();
             Updatelb_Datas(ID);
 
         }
 
-        private void Updatelb_Datas(int Id)
+        private void Updatelb_Datas(string Id)
         {
             OwnerTableHandler ownerTableHandler = new OwnerTableHandler();
             foreach (Owners o in ownerTableHandler.Select())
